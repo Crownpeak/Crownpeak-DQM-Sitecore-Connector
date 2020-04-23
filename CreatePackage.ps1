@@ -2,7 +2,7 @@ $package = New-Package "Sitecore Crownpeak Connector"
 
 $package.Metadata.Author = "Cognifide";
 $package.Metadata.Publisher = "Cognifide Limited";
-$package.Metadata.Version = "1.0";
+$package.Metadata.Version = "2.0";
 
 $configs = Get-UnicornConfiguration "Cognifide.Sitecore.Crownpeak" 
 

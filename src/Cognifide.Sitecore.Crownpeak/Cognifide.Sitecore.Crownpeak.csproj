@@ -21,6 +21,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -308,6 +309,7 @@
   <ItemGroup>
     <Compile Include="Commands\LayoutCommand.cs" />
     <Compile Include="Commands\ShowPreviewTab.cs" />
+    <Compile Include="DAO\DAOErrorLog.cs" />
     <Compile Include="Logic\AbstractValidator.cs" />
     <Compile Include="Logic\HtmlRenderer.cs" />
     <Compile Include="Logic\ItemValidator.cs" />

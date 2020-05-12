@@ -265,6 +265,7 @@
     <Content Include="App_Config\Include\Cognifide.Crownpeak.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Error_Log.txt" />
     <Content Include="sitecore\shell\Applications\Content Manager\Controls\Crownpeak\CrownpeakCommand.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -321,6 +322,7 @@
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="Commands\LayoutCommand.cs" />
     <Compile Include="Commands\ShowPreviewTab.cs" />
+    <Compile Include="DAO\DAOErrorLog.cs" />
     <Compile Include="Logic\AbstractValidator.cs" />
     <Compile Include="Logic\HtmlRenderer.cs" />
     <Compile Include="Logic\ItemValidator.cs" />

@@ -5,6 +5,8 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Web;
+using Cognifide.Sitecore.Crownpeak.DAO;
+using Cognifide.Sitecore.Crownpeak.Logic;
 using Cognifide.Sitecore.Crownpeak.Service.Model;
 using Newtonsoft.Json;
 
@@ -20,7 +22,15 @@ namespace Cognifide.Sitecore.Crownpeak.Service
 
         public CrownpeakClient(string apiKey, int retryCount)
         {
-            _apiBaseUrl = new Uri("https://api.crownpeak.net/dqm-cms/v1");
+            if (Settings.ApiUrl != "")
+            {
+                _apiBaseUrl = new Uri(Settings.ApiUrl);
+            }
+            else
+            {
+                _apiBaseUrl = new Uri("https://api.crownpeak.net/dqm-cms/v1");
+            }
+
             _apiKey = apiKey;
             _retryCount = retryCount;
         }
@@ -40,18 +50,25 @@ namespace Cognifide.Sitecore.Crownpeak.Service
         public Checkpoint[] GetWebsiteCheckpoints(string websiteId)
         {
             var json = Execute("GET", string.Format("/websites/{0}/checkpoints", websiteId));
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetWebsiteCheckpoints", "Request", "WebsiteId : " + websiteId);
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetWebsiteCheckpoints", "Response", json);
+
             return JsonConvert.DeserializeObject<Checkpoint[]>(json ?? string.Empty);
         }
 
         public Checkpoint[] GetCheckpoints()
         {
             var json = Execute("GET", "/checkpoints");
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetCheckpoints", "Request", "Checkpoints");
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetCheckpoints", "Response", json);
+
             return JsonConvert.DeserializeObject<Checkpoint[]>(json ?? string.Empty);
         }
 
         public string HightlightAll(string assetId)
         {
-
             var data = new NameValueCollection
             {
                 {"visibility", "public"},
@@ -59,12 +76,19 @@ namespace Cognifide.Sitecore.Crownpeak.Service
 
             var json = Execute("GET", "/assets/{0}/pagehighlight/all", data);
 
+            DAOErrorLog.GetInstance.ErrorLogWrite("HightlightAll", "Request", "AssetId : " + assetId + ", Data : 'visibility', 'public'");
+            DAOErrorLog.GetInstance.ErrorLogWrite("HightlightAll", "Response", json);
+
             return json;
         }
 
         public Checkpoint GetCheckpoint(string checkpointId)
         {
             var json = Execute("GET", string.Format("/checkpoints/{0}", checkpointId));
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetCheckpoint", "Request", "CheckpointId : " + checkpointId);
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetCheckpoint", "Response", json);
+
             return JsonConvert.DeserializeObject<Checkpoint>(json ?? string.Empty);
         }
 
@@ -82,17 +106,27 @@ namespace Cognifide.Sitecore.Crownpeak.Service
             }
 
             var json = Execute("POST", "/assets", null, data);
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("CreateAsset", "Request", "WebsiteId : " + websiteId + ", ContentType : " + contentType + ", Url : " + url + ", Content : " + content);
+            DAOErrorLog.GetInstance.ErrorLogWrite("CreateAsset", "Response", json);
+
             return JsonConvert.DeserializeObject<Asset>(json ?? string.Empty);
         }
 
         public Asset UpdateAsset(string assetId, string content)
         {
+            
+
             var data = new NameValueCollection
                            {
                                {"content", content},
                            };
 
             var json = Execute("PUT", string.Format("/assets/{0}", assetId), null, data);
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("UpdateAsset", "Request", "AssetId : " + assetId + ", Content : " + content);
+            DAOErrorLog.GetInstance.ErrorLogWrite("UpdateAsset", "Respose", json);
+
             return JsonConvert.DeserializeObject<Asset>(json ?? string.Empty);
         }
 
@@ -104,17 +138,30 @@ namespace Cognifide.Sitecore.Crownpeak.Service
         public Asset GetAsset(string assetId)
         {
             var json = Execute("GET", string.Format("/assets/{0}", assetId));
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetAsset", "Request", "AssetId : " + assetId);
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetAsset", "Respose", json);
+
             return JsonConvert.DeserializeObject<Asset>(json ?? string.Empty);
         }
 
         public string GetAssetContent(string assetId)
         {
-            return Execute("GET", string.Format("/assets/{0}/content", assetId));
+            var str = Execute("GET", string.Format("/assets/{0}/content", assetId));
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetAssetContent", "Request", "AssetId : " + assetId);
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetAssetContent", "Response", str);
+
+            return str;
         }
 
         public AssetStatus GetAssetStatus(string assetId)
         {
             var json = Execute("GET", string.Format("/assets/{0}/status", assetId));
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetAssetStatus", "Request", "AssetId : " + assetId);
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetAssetStatus", "Response", json);
+
             return JsonConvert.DeserializeObject<AssetStatus>(json ?? string.Empty);
         }
 
@@ -125,7 +172,12 @@ namespace Cognifide.Sitecore.Crownpeak.Service
                                 {"highlightSource", highlightSource.ToString()},
                             };
 
-            return Execute("GET", string.Format("/assets/{0}/errors/{1}", assetId, checkpointId), query);
+            var str = Execute("GET", string.Format("/assets/{0}/errors/{1}", assetId, checkpointId), query);
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetAssetError", "Request", "AssetId : " + assetId + " CheckpointId : " + checkpointId + " HighlightSource : " + highlightSource.ToString());
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetAssetError", "Response", str);
+
+            return str;
         }
 
         public string GetPageHighlight(string assetId)
@@ -134,8 +186,14 @@ namespace Cognifide.Sitecore.Crownpeak.Service
             {
                 {"color", "ff0000"},
             };
-            return Execute("GET", string.Format("/assets/{0}/pagehighlight/all", assetId), accept: "text/html; charset=UTF-8",
+
+            var str = Execute("GET", string.Format("/assets/{0}/pagehighlight/all", assetId), accept: "text/html; charset=UTF-8",
                 query: query);
+
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetPageHighlight", "Request", "AssetId : " + assetId);
+            DAOErrorLog.GetInstance.ErrorLogWrite("GetPageHighlight", "Response", str);
+
+            return str;
         }
 
         public SearchResult FindAssets(string websiteId, string url, int limit = 20)

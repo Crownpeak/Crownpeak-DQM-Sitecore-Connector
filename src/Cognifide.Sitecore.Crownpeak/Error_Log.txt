@@ -1,0 +1,5 @@
+Note : 
+1. Copy this file to the Sitecore root folder to get the log of the Crownpeak DQM.
+2. Alter the Crownpeak.Log setting in the Cognifide.Crownpeak.config file to elable the log.
+3. Alter the Crownpeak.ApiUrl setting in the Cognifide.Crownpeak.config file to override the Api base Url.
+

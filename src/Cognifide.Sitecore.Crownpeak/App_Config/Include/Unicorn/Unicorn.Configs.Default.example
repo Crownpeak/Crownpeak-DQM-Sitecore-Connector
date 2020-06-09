@@ -42,9 +42,7 @@
 						inheritors will have 'extends="AbstractConfigName"' on their root element.
 				-->
 				<configuration name="Feature.Sample" description="Write something here about why this configuration exists and what it's for. Or remove the attribute; it's optional.">
-
-
-          <predicate>
+					<predicate>
 						<!--
 							PREDICATE
 							

@@ -24,7 +24,8 @@ namespace Cognifide.Sitecore.Crownpeak.Service
 
         public static string GetUrl(Item item)
         {
-            var defaultOptions = UrlOptions.DefaultOptions;
+            var defaultOptions = LinkManager.GetDefaultUrlBuilderOptions();
+
             var siteInfo = SiteHelper.GetSiteInfo(item);
             defaultOptions.Site = SiteContext.GetSite(siteInfo != null ? siteInfo.Name : "shell");
 

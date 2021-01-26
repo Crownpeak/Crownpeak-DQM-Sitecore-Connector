@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 using System.Web.Configuration;
-using Cognifide.Sitecore.Crownpeak.Logic;
+using Crownpeak.Sitecore.DQM.Logic;
 using Sitecore;
 using Sitecore.Data.Items;
 using Sitecore.Links;
@@ -13,7 +13,7 @@ using Sitecore.Sites;
 using Sitecore.Text;
 using Sitecore.Web;
 
-namespace Cognifide.Sitecore.Crownpeak.Service
+namespace Crownpeak.Sitecore.DQM.Service
 {
     public class ItemContentHelper
     {

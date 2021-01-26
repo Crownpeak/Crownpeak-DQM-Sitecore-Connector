@@ -1,6 +1,6 @@
 ﻿using SitecoreSettings = Sitecore.Configuration.Settings;
 
-namespace Cognifide.Sitecore.Crownpeak.Logic
+namespace Crownpeak.Sitecore.DQM.Logic
 {
     public static class Settings
     {

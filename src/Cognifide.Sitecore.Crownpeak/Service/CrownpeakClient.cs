@@ -5,12 +5,12 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Web;
-using Cognifide.Sitecore.Crownpeak.DAO;
-using Cognifide.Sitecore.Crownpeak.Logic;
-using Cognifide.Sitecore.Crownpeak.Service.Model;
+using Crownpeak.Sitecore.DQM.DAO;
+using Crownpeak.Sitecore.DQM.Logic;
+using Crownpeak.Sitecore.DQM.Service.Model;
 using Newtonsoft.Json;
 
-namespace Cognifide.Sitecore.Crownpeak.Service
+namespace Crownpeak.Sitecore.DQM.Service
 {
     public class CrownpeakClient
     {

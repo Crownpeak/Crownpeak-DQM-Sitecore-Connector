@@ -1,10 +1,10 @@
 ﻿using System;
-using Cognifide.Sitecore.Crownpeak.Logic;
+using Crownpeak.Sitecore.DQM.Logic;
 using Sitecore;
 using Sitecore.Jobs.AsyncUI;
 using Sitecore.Web.UI.Sheer;
 
-namespace Cognifide.Sitecore.Crownpeak.UI
+namespace Crownpeak.Sitecore.DQM.UI
 {
     public abstract class BaseTab : BaseForm
     {

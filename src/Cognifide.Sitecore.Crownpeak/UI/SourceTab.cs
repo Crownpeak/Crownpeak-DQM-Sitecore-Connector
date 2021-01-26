@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using System.Web;
-using Cognifide.Sitecore.Crownpeak.Logic;
+using Crownpeak.Sitecore.DQM.Logic;
 using Sitecore.Data;
 using Sitecore.Jobs;
 using Sitecore.Web.UI.Sheer;
 
-namespace Cognifide.Sitecore.Crownpeak.UI
+namespace Crownpeak.Sitecore.DQM.UI
 {
     public class SourceTab : BaseTab
     {

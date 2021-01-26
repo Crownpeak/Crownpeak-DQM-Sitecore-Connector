@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.UI;
-using Cognifide.Sitecore.Crownpeak.Logic;
-using Cognifide.Sitecore.Crownpeak.Service.Model;
+using Crownpeak.Sitecore.DQM.Logic;
+using Crownpeak.Sitecore.DQM.Service.Model;
 using HtmlAgilityPack;
 using Sitecore.Data;
 using Sitecore.Jobs;
@@ -14,7 +14,7 @@ using Sitecore.Web;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
 
-namespace Cognifide.Sitecore.Crownpeak.UI
+namespace Crownpeak.Sitecore.DQM.UI
 {
     public class PreviewTab : BaseTab
     {

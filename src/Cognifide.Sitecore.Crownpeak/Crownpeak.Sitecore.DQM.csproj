@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cognifide.Sitecore.Crownpeak</RootNamespace>
-    <AssemblyName>Cognifide.Sitecore.Crownpeak</AssemblyName>
+    <RootNamespace>Crownpeak.Sitecore.DQM</RootNamespace>
+    <AssemblyName>Crownpeak.Sitecore.DQM</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -431,10 +431,10 @@
     <Content Include="Content\crownpeak\32x32\crownpeak.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="App_Config\Include\Cognifide.Crownpeak.config">
+    <Content Include="App_Config\Include\Crownpeak.Sitecore.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Cognifide.Crownpeak.Serialization.config">
+    <Content Include="App_Config\Include\Crownpeak.Sitecore.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Error_Log.txt" />

@@ -1,4 +1,4 @@
-namespace Cognifide.Sitecore.Crownpeak.Logic
+namespace Crownpeak.Sitecore.DQM.Logic
 {
     public class CheckpointModel
     {

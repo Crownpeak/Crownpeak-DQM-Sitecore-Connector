@@ -1,6 +1,6 @@
-﻿using Cognifide.Sitecore.Crownpeak.Service.Model;
+﻿using Crownpeak.Sitecore.DQM.Service.Model;
 
-namespace Cognifide.Sitecore.Crownpeak.Logic
+namespace Crownpeak.Sitecore.DQM.Logic
 {
     public class ValidationArgs
     {

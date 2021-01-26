@@ -1,4 +1,4 @@
-﻿namespace Cognifide.Sitecore.Crownpeak.Service.Model
+﻿namespace Crownpeak.Sitecore.DQM.Service.Model
 {
     public class SearchResult
     {

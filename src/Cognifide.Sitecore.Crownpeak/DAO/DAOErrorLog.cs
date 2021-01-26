@@ -1,9 +1,9 @@
-﻿using Cognifide.Sitecore.Crownpeak.Logic;
+﻿using Crownpeak.Sitecore.DQM.Logic;
 using System;
 using System.IO;
 using System.Web.Hosting;
 
-namespace Cognifide.Sitecore.Crownpeak.DAO
+namespace Crownpeak.Sitecore.DQM.DAO
 {
     public class DAOErrorLog
     {

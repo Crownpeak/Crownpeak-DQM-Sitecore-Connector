@@ -8,7 +8,7 @@ using Sitecore.Web;
 using Sitecore.Web.UI.Framework.Scripts;
 using Sitecore.Web.UI.Sheer;
 
-namespace Cognifide.Sitecore.Crownpeak.Commands
+namespace Crownpeak.Sitecore.DQM.Commands
 {
     public class ShowPreviewTab : LayoutCommand
     {

@@ -5,7 +5,7 @@ using Sitecore.Configuration;
 using Sitecore.Data.Items;
 using Sitecore.Web;
 
-namespace Cognifide.Sitecore.Crownpeak.Logic
+namespace Crownpeak.Sitecore.DQM.Logic
 {
     public static class SiteHelper
     {

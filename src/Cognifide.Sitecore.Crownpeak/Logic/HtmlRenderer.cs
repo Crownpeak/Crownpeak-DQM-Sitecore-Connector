@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using Newtonsoft.Json;
 
-namespace Cognifide.Sitecore.Crownpeak.Logic
+namespace Crownpeak.Sitecore.DQM.Logic
 {
     public class HtmlRenderer
     {

@@ -1,6 +1,6 @@
-![Cognifide logo](docs/Logo.png)
+![ Crownpeak / iMedia logo](docs/Logo.png)
 
-[![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/Cognifide/gradle-aem-plugin.svg?label=License)](http://www.apache.org/licenses/)
+[![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/imediainc/gradle-aem-plugin.svg?label=License)](http://www.apache.org/licenses/)
 
 # Crownpeak DQM Sitecore Connector
 
@@ -14,7 +14,7 @@ Learn more about the detailed features of the product and why the world’s top 
 
 ## Requirements
 
-* Sitecore  8.2
+* Sitecore 10
 * Visual Studio 2017
 
 ## Deployment
@@ -29,6 +29,9 @@ Creating Sitecore package
 1. Install [Sitecore Powershell Extensions](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx)
 2. Run `CreatePackage.ps1` file in Powerhshell ISE
 3. Download created package
+
+## Installation
+For more information please view the [Installation Instructions](https://community.crownpeak.com/t5/Integrations/DQM-API-and-Integration-DQM-Connector-Installation-and-Usage/ta-p/457) on the Crownpeak Community site.
 
 ## License
 

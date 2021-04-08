@@ -2,7 +2,7 @@
 <control xmlns:def="Definition">
   <Crownpeak.PreviewTab>
     <FormPage>
-      <CodeBeside Type="Cognifide.Sitecore.Crownpeak.UI.PreviewTab, Cognifide.Sitecore.Crownpeak"/>
+      <CodeBeside Type="Crownpeak.Sitecore.DQM.UI.PreviewTab, Crownpeak.Sitecore.DQM"/>
       <script language="javascript">
         scForm.browser.attachEvent(window, 'onload', function() { scForm.invoke('preview:start'); });
       </script>

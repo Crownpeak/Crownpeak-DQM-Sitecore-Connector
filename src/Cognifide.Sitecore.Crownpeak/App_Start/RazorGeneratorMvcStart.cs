@@ -3,9 +3,9 @@ using System.Web.Mvc;
 using System.Web.WebPages;
 using RazorGenerator.Mvc;
 
-[assembly: WebActivatorEx.PostApplicationStartMethod(typeof(Cognifide.Sitecore.Crownpeak.RazorGeneratorMvcStart), "Start")]
+[assembly: WebActivatorEx.PostApplicationStartMethod(typeof(Crownpeak.Sitecore.DQM.RazorGeneratorMvcStart), "Start")]
 
-namespace Cognifide.Sitecore.Crownpeak {
+namespace Crownpeak.Sitecore.DQM {
     public static class RazorGeneratorMvcStart {
         public static void Start() {
             var engine = new PrecompiledMvcEngine(typeof(RazorGeneratorMvcStart).Assembly) {

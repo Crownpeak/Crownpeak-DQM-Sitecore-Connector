@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Sitecore.Configuration;
 using Sitecore.Data.Items;
 using Sitecore.Web;
 
-namespace Cognifide.Sitecore.Crownpeak.Logic
+namespace Crownpeak.Sitecore.DQM.Logic
 {
     public static class SiteHelper
     {
@@ -13,8 +14,8 @@ namespace Cognifide.Sitecore.Crownpeak.Logic
         public static IEnumerable<SiteInfo> Sites
         {
             get
-            {
-                return _sites ?? (_sites = global::Sitecore.Configuration.Settings.Sites.Where(s => s.EnablePreview).ToList());
+            {                
+                return _sites ?? (_sites = Factory.GetSiteInfoList().Where(s => s.EnablePreview).ToList());
             }
         }
 

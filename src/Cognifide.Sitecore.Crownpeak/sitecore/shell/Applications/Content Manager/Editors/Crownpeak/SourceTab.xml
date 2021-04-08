@@ -2,7 +2,7 @@
 <control xmlns:def="Definition">
   <Crownpeak.SourceTab>
     <FormDialog  Header="Crownpeak DQM - Source" CancelButton="false">
-      <CodeBeside Type="Cognifide.Sitecore.Crownpeak.UI.SourceTab, Cognifide.Sitecore.Crownpeak"/>
+      <CodeBeside Type="Crownpeak.Sitecore.DQM.UI.SourceTab, Crownpeak.Sitecore.DQM"/>
       <script language="javascript">
         scForm.browser.attachEvent(window, 'onload', function() { scForm.invoke('source:start'); });
       </script>

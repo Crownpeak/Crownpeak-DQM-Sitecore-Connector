@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
-using Cognifide.Sitecore.Crownpeak.Service;
+using Crownpeak.Sitecore.DQM.Service;
 using Sitecore.Data.Validators;
 
-namespace Cognifide.Sitecore.Crownpeak.Logic
+namespace Crownpeak.Sitecore.DQM.Logic
 {
     public abstract class AbstractValidator : StandardValidator
     {

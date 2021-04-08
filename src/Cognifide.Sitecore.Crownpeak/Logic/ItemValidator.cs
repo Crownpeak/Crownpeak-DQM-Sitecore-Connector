@@ -2,11 +2,11 @@
 using System.Net;
 using System.Runtime.Serialization;
 using System.Web;
-using Cognifide.Sitecore.Crownpeak.Service;
+using Crownpeak.Sitecore.DQM.Service;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 
-namespace Cognifide.Sitecore.Crownpeak.Logic
+namespace Crownpeak.Sitecore.DQM.Logic
 {
     [Serializable]
     public class ItemValidator : AbstractValidator

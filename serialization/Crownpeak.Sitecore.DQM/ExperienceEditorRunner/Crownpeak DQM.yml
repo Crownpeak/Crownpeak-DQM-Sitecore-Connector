@@ -1,0 +1,45 @@
+﻿---
+ID: "d005eba4-92e6-4ab8-9354-a0aad42cd4bf"
+Parent: "0a9eecf3-19b9-418f-b96c-4da63d947326"
+Template: "1db34c92-03b0-4475-9a39-da14e4d9d8fc"
+Path: /sitecore/content/Applications/WebEdit/Ribbons/WebEdit/Page Editor/Proofing/Crownpeak DQM
+DB: core
+SharedFields:
+- ID: "1193b1a3-0148-413f-a979-49b39aa4a2af"
+  Hint: ID
+  Value: DQMID
+- ID: "d47ed548-84d5-4622-9886-5cc164727507"
+  Hint: Icon
+  Value: /Content/crownpeak/24x24/crownpeak.png
+- ID: "dbbf9ee3-c30e-4456-a81f-ed8c2e8df91b"
+  Hint: Click
+  Value: "crownpeak:eevalidation"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          id="{28D7AA23-A9A3-4ABC-9DE6-AA717F6177CD}"
+          par="Id=LargeButton1&amp;Click=trigger%3abutton%3aclick&amp;IsVisible=1&amp;Command=ShowCrownpeakDQM&amp;PageCodeScriptFileName=%2fsitecore%2fshell%2fApplications%2fContent+Manager%2fControls%2fCrownpeak%2fCrownpeakCommand.js&amp;PostponedCall=1"
+          ph=""
+          uid="{5B451A0B-653C-436A-A3CA-815965D5EA18}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170802T065440Z
+    - ID: "4df6da21-e745-444c-956e-1d4a96ab8821"
+      Hint: Header
+      Value: Crownpeak DQM
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

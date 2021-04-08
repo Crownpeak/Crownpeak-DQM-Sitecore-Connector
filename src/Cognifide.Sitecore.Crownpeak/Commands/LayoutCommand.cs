@@ -1,7 +1,7 @@
 ﻿using Sitecore.Diagnostics;
 using Sitecore.Shell.Framework.Commands;
 
-namespace Cognifide.Sitecore.Crownpeak.Commands
+namespace Crownpeak.Sitecore.DQM.Commands
 {
     public abstract class LayoutCommand : Command
     {

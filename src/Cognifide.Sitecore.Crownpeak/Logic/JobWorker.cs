@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Sitecore.Jobs.AsyncUI;
 
-namespace Cognifide.Sitecore.Crownpeak.Logic
+namespace Crownpeak.Sitecore.DQM.Logic
 {
     public class JobWorker
     {
